@@ -180,11 +180,11 @@ public class CombinationLockModule : MonoBehaviour
 		code1 += batteryCount;
 		code2 += numberOfSolvedModules;
 
-		code1 = code1 >= Max ? code1 - Max : code1;
-		code2 = code2 >= Max ? code2 - Max : code2;
+		code1 = code1 >= Max ? code1 % Max : code1;
+		code2 = code2 >= Max ? code2 % Max : code2;
 
 		var code3 = code1 + code2;
-		code3 = code3 >= Max ? code3 - Max : code3;
+		code3 = code3 >= Max ? code3 % Max : code3;
 
 		_code.Add(code1);
 		_code.Add(code2);
